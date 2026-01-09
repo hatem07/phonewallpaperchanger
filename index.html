@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallpaper Changer App</title>
+
+<style>
+:root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --muted: #9aa4af;
+    --accent: #4da3ff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    padding: 60px 20px 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+header p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px 40px;
+}
+
+/* Showcase */
+.showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* Phone mockup */
+.phone {
+    width: 260px;
+    height: 520px;
+    margin: auto;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 2px solid #222;
+    box-shadow: 0 25px 50px rgba(0,0,0,.6);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Cards */
+.card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .showcase {
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Wallpaper Changer</h1>
+    <p>
+        A lightweight and privacy-friendly phone wallpaper changer,
+        designed to work smoothly on both old and new Android devices.
+    </p>
+</header>
+
+<div class="container">
+
+    <div class="showcase">
+        <div class="phone">
+            <div class="slides">
+                <img src="screenshot1.jpg" alt="App screenshot 1">
+                <img src="screenshot2.jpg" alt="App screenshot 2">
+                <img src="screenshot3.jpg" alt="App screenshot 3">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📱 About the App</h2>
+            <p>
+                Wallpaper Changer allows users to browse, download, and set wallpapers
+                for home and lock screens with ease.
+                The app is optimized for performance, simplicity, and low resource usage.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>✨ Features</h2>
+        <ul>
+            <li>Modern dark-mode UI</li>
+            <li>High-quality wallpapers</li>
+            <li>Home & Lock screen support</li>
+            <li>Works offline after download</li>
+            <li>Optimized for low-end devices</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔒 Privacy First</h2>
+        <p>
+            Your privacy matters.
+            <br><br>
+            ✔ No personal data collection<br>
+            ✔ No tracking or analytics<br>
+            ✔ Internet access only for downloading wallpapers<br>
+            ✔ No user information sent to servers
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Wallpaper Changer · Simple · Secure · Private
+</footer>
+
+</body>
+</html>
